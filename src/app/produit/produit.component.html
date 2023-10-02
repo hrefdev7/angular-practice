@@ -1,0 +1,32 @@
+<div class="container"><div class="card">
+    <h5 class="card-header">Liste Produit</h5>
+    <div class="card-body">
+        <table class="table table-light  ">
+            <thead>
+                <!-- creation entete tableau -->
+              <tr>
+                <th  >id</th>
+                <th  >Name</th>
+                <th  >Price</th> 
+
+               </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of produit">
+                     
+                    <td >{{p.id}}</td>
+                    <td>{{p.name}}</td>
+                    <td>{{p.price}}</td>
+                    <td>
+                        <button (click)="handelDeleteProduct(p)" class="btn btn-danger">
+                            <i class="bi bi-trash2-fill"></i>
+
+                        </button>
+                    </td> 
+                </tr>
+             
+               
+            </tbody>
+          </table>
+    </div></div>
+  </div>
